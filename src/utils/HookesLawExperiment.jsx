@@ -33,15 +33,15 @@ function HookesLawExperiment() {
           force is removed.
         </p>
         <p>
-          - **Force (F):** The applied force causing the extension or
+          - Force (F): The applied force causing the extension or
           compression (measured in Newtons, N).
         </p>
         <p>
-          - **Displacement (x):** The change in length of the spring from its
+          - Displacement (x): The change in length of the spring from its
           rest position (measured in meters, m).
         </p>
         <p>
-          - **Spring Constant (k):** A measure of the stiffness of the spring
+          - Spring Constant (k): A measure of the stiffness of the spring
           (measured in Newtons per meter, N/m).
         </p>
 
@@ -51,9 +51,9 @@ function HookesLawExperiment() {
           F = k × x
         </p>
         <p>
-          - **F:** Force (Newtons, N) <br />
-          - **k:** Spring Constant (Newtons per meter, N/m) <br />- **x:**
-          Displacement (Meters, m)
+          - F: Force (Newtons, N) <br />
+          - k: Spring Constant (Newtons per meter, N/m) <br />
+          - x: Displacement (Meters, m)
         </p>
 
         <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -66,32 +66,31 @@ function HookesLawExperiment() {
       </>
     ),
     procedure: [
-      "Set up the experimental apparatus*: Arrange a clamp stand, a helical spring, a meter ruler, and a set of known weights. Ensure the setup is stable and the ruler is positioned vertically.",
+      "Set up the experimental apparatus: Arrange a clamp stand, a helical spring, a meter ruler, and a set of known weights. Ensure the setup is stable and the ruler is positioned vertically.",
 
-      "Measure the spring’s natural length*: Before adding any weight, measure and record the initial length of the spring without any load using a meter ruler.",
+      "Measure the spring’s natural length: Before adding any weight, measure and record the initial length of the spring without any load using a meter ruler.",
 
-      "Attach the first weight*: Suspend a small known mass (e.g., 100g) from the spring and allow it to come to rest before measuring the new length of the spring.",
+      "Attach the first weight: Suspend a small known mass (e.g., 100g) from the spring and allow it to come to rest before measuring the new length of the spring.",
 
-      "Record the extension*: Calculate the extension by subtracting the original length from the stretched length and note it in a data table along with the applied force.",
+      "Record the extension: Calculate the extension by subtracting the original length from the stretched length and note it in a data table along with the applied force.",
 
-      "Increase the load gradually*: Add more weights in small, equal increments (e.g., 100g each time) and record the corresponding extension after each addition.",
+      "Increase the load gradually: Add more weights in small, equal increments (e.g., 100g each time) and record the corresponding extension after each addition.",
 
-      "Plot force vs. extension graph*: Plot the applied force (y-axis) against the extension (x-axis). If Hooke’s Law is followed, the graph should be a straight line through the origin with a slope equal to the spring constant (k).",
+      "Plot force vs. extension graph: Plot the applied force (y-axis) against the extension (x-axis). If Hooke’s Law is followed, the graph should be a straight line through the origin with a slope equal to the spring constant (k).",
 
-      "Determine the spring constant*: Calculate the spring constant (k) using Hooke’s Law formula: F = kx, where F is the force and x is the extension.",
+      "Determine the spring constant: Calculate the spring constant (k) using Hooke’s Law formula: F = kx, where F is the force and x is the extension.",
 
-      "Check the elastic limit*: Continue adding weights until the spring no longer returns to its original length after removing the load. This indicates the elastic limit, beyond which Hooke’s Law no longer applies.",
+      "Check the elastic limit: Continue adding weights until the spring no longer returns to its original length after removing the load. This indicates the elastic limit, beyond which Hooke’s Law no longer applies.",
 
-      "Repeat for accuracy*: Perform multiple trials for the same weights and take the average extension values to reduce measurement errors.",
+      "Repeat for accuracy: Perform multiple trials for the same weights and take the average extension values to reduce measurement errors.",
 
-      "Investigate different materials*: Repeat the experiment using different springs or elastic bands and compare their spring constants.",
+      "Investigate different materials: Repeat the experiment using different springs or elastic bands and compare their spring constants.",
 
-      "Analyze sources of error*: Consider human errors in measuring length, parallax errors while reading the scale, and possible variations in material properties.",
+      "Analyze sources of error: Consider human errors in measuring length, parallax errors while reading the scale, and possible variations in material properties.",
 
-      "Document your findings*: Prepare a lab report with detailed observations, data tables, calculations, graphs, and conclusions on the validity of Hooke’s Law for different materials.",
+      "Document your findings: Prepare a lab report with detailed observations, data tables, calculations, graphs, and conclusions on the validity of Hooke’s Law for different materials.",
     ],
     queries: "/assets/hookes-law-animation.gif",
-    video: "https://www.youtube.com/embed/HookesLawVideo",
     resources: [
       {
         title: "Hooke's Law - Khan Academy",
@@ -383,6 +382,32 @@ function HookesLawExperiment() {
             </div>
         )}
         {activeTab === "simulation" && <HelpHookesLaw />}
+
+        {activeTab === "video" && (
+          <iframe
+            width="100%"
+            height="600"
+            src={"https://www.youtube.com/embed/g2pyBUQSigI"}
+            title="Ohm's Law Video"
+            className="rounded-md"
+            allowFullScreen
+          ></iframe>
+        )}
+
+        {activeTab === "resources" && (
+          <ul className="list-disc pl-5">
+            {experiment.resources.map((resource, index) => (
+              <li key={index} className="mb-2">
+                <a
+                  href={resource.link}
+                  className="text-blue-600 hover:underline"
+                >
+                  {resource.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {activeTab === "feedback" && (
           <div>

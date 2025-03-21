@@ -36,19 +36,19 @@ function AcidBaseTitrationSimulator() {
           base completely neutralize each other.
         </p>
         <p>
-          - **Acid (H⁺ donor):** A substance that releases hydrogen ions (H⁺) in
+          - Acid (H⁺ donor): A substance that releases hydrogen ions (H⁺) in
           solution.
         </p>
         <p>
-          - **Base (OH⁻ donor):** A substance that releases hydroxide ions (OH⁻)
+          - Base (OH⁻ donor): A substance that releases hydroxide ions (OH⁻)
           in solution.
         </p>
         <p>
-          - **Equivalence Point:** The point where the number of moles of acid
+          - Equivalence Point: The point where the number of moles of acid
           equals the number of moles of base.
         </p>
         <p>
-          - **Indicator:** A chemical that changes color at or near the
+          - Indicator: A chemical that changes color at or near the
           equivalence point to signal the end of the titration.
         </p>
 
@@ -58,10 +58,10 @@ function AcidBaseTitrationSimulator() {
           N₁V₁ = N₂V₂
         </p>
         <p>
-          - **N₁:** Normality of the acid (eq/L) <br />
-          - **V₁:** Volume of the acid (L) <br />
-          - **N₂:** Normality of the base (eq/L) <br />- **V₂:** Volume of the
-          base (L)
+          - N₁: Normality of the acid (eq/L) <br />
+          - V₁: Volume of the acid (L) <br />
+          - N₂: Normality of the base (eq/L) <br />
+          - V₂: Volume of the base (L)
         </p>
 
         <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -74,25 +74,25 @@ function AcidBaseTitrationSimulator() {
       </>
     ),
     procedure: [
-      "Set up the titration apparatus*: Assemble a burette, pipette, conical flask, burette stand, and a white tile. Ensure all glassware is clean and free from contaminants.",
-      "Prepare the acid solution*: Fill the burette with the standardized acid solution (e.g., HCl) using a funnel. Remove the funnel after filling to avoid additional drops altering the volume.",
-      "Prepare the base solution*: Use a pipette to measure a fixed volume of the base solution (e.g., NaOH) and transfer it into the conical flask. Add a few drops of a suitable indicator (e.g., phenolphthalein for strong acid-strong base titration).",
-      "Record the initial burette reading*: Note the starting volume of the acid in the burette to ensure accurate volume measurement.",
-      "Start the titration slowly*: Open the burette tap and allow the acid to flow into the conical flask drop by drop while swirling continuously to mix the reactants.",
-      "Observe color changes*: Look for the first permanent color change in the indicator, signaling that the endpoint is near.",
-      "Approach the endpoint carefully*: As the color begins to change, reduce the acid flow to single drops to avoid overshooting the endpoint.",
-      "Determine the endpoint*: The endpoint is reached when a single drop of acid causes a permanent color change (e.g., phenolphthalein turns from pink to colorless). Close the burette tap immediately.",
-      "Record the final burette reading*: Measure the final volume of acid in the burette and calculate the volume of acid used in the titration.",
-      "Repeat for accuracy*: Conduct at least three titrations to obtain concordant readings (values within 0.1 mL of each other). Discard any rough trials.",
-      "Calculate the unknown concentration*: Use the titration formula ( M_1V_1 = M_2V_2 ) to determine the unknown concentration of the acid or base.",
-      "Plot a titration curve*: If required, create a pH vs. volume graph to visualize the neutralization process and identify the equivalence point.",
-      "Verify the reaction stoichiometry*: Ensure that the molar ratio of the acid and base matches the expected chemical equation.",
-      "Test with different indicators*: Repeat the titration using different indicators (e.g., methyl orange, bromothymol blue) to observe how the endpoint varies.",
-      "Analyze sources of error*: Consider parallax errors in burette readings, incorrect endpoint detection, improper swirling, or variations in room temperature.",
-      "Document findings*: Compile a detailed lab report including observations, data tables, calculations, graphs, and conclusions on the precision and accuracy of the titration.",
+      "Set up the titration apparatus: Assemble a burette, pipette, conical flask, burette stand, and a white tile. Ensure all glassware is clean and free from contaminants.",
+      "Prepare the acid solution: Fill the burette with the standardized acid solution (e.g., HCl) using a funnel. Remove the funnel after filling to avoid additional drops altering the volume.",
+      "Prepare the base solution: Use a pipette to measure a fixed volume of the base solution (e.g., NaOH) and transfer it into the conical flask. Add a few drops of a suitable indicator (e.g., phenolphthalein for strong acid-strong base titration).",
+      "Record the initial burette reading: Note the starting volume of the acid in the burette to ensure accurate volume measurement.",
+      "Start the titration slowly: Open the burette tap and allow the acid to flow into the conical flask drop by drop while swirling continuously to mix the reactants.",
+      "Observe color changes: Look for the first permanent color change in the indicator, signaling that the endpoint is near.",
+      "Approach the endpoint carefully: As the color begins to change, reduce the acid flow to single drops to avoid overshooting the endpoint.",
+      "Determine the endpoint: The endpoint is reached when a single drop of acid causes a permanent color change (e.g., phenolphthalein turns from pink to colorless). Close the burette tap immediately.",
+      "Record the final burette reading: Measure the final volume of acid in the burette and calculate the volume of acid used in the titration.",
+      "Repeat for accuracy: Conduct at least three titrations to obtain concordant readings (values within 0.1 mL of each other). Discard any rough trials.",
+      "Calculate the unknown concentration: Use the titration formula ( M_1V_1 = M_2V_2 ) to determine the unknown concentration of the acid or base.",
+      "Plot a titration curve: If required, create a pH vs. volume graph to visualize the neutralization process and identify the equivalence point.",
+      "Verify the reaction stoichiometry: Ensure that the molar ratio of the acid and base matches the expected chemical equation.",
+      "Test with different indicators: Repeat the titration using different indicators (e.g., methyl orange, bromothymol blue) to observe how the endpoint varies.",
+      "Analyze sources of error: Consider parallax errors in burette readings, incorrect endpoint detection, improper swirling, or variations in room temperature.",
+      "Document findings: Compile a detailed lab report including observations, data tables, calculations, graphs, and conclusions on the precision and accuracy of the titration.",
     ],
     queries: "/assets/acid-base-titration-animation.gif",
-    video: "https://www.youtube.com/embed/AcidBaseTitrationVideo",
+
     resources: [
       {
         title: "Acid-Base Titration - Khan Academy",
@@ -378,8 +378,8 @@ function AcidBaseTitrationSimulator() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
-            src={experiment.video}
+            height="600"
+            src={"https://www.youtube.com/embed/sFpFCPTDv2w"}
             title="Experiment Video"
             className="rounded-md"
             allowFullScreen

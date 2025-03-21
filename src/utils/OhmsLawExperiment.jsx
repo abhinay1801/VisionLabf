@@ -30,13 +30,13 @@ function OhmsLawSimulator() {
       The law is fundamental to electrical circuits and helps in understanding how electrical components behave under different voltages and resistances.
     </p>
     <p>
-      - **Voltage (V):** The potential difference applied across the circuit (measured in volts).  
+      - Voltage (V): The potential difference applied across the circuit (measured in volts).  
     </p>
     <p>
-      - **Current (I):** The flow of electric charge through the circuit (measured in amperes).  
+      - Current (I): The flow of electric charge through the circuit (measured in amperes).  
     </p>
     <p>
-      - **Resistance (R):** The opposition offered by the material to the flow of current (measured in ohms, Ω).  
+      - Resistance (R): The opposition offered by the material to the flow of current (measured in ohms, Ω).  
     </p>
   
     <h2 className="text-xl font-bold mt-4">Mathematical Model</h2>
@@ -47,9 +47,9 @@ function OhmsLawSimulator() {
       V = I × R
     </p>
     <p>
-      - **V:** Voltage (Volts) <br />
-      - **I:** Current (Amperes) <br />
-      - **R:** Resistance (Ohms, Ω)  
+      - V: Voltage (Volts) <br />
+      - I: Current (Amperes) <br />
+      - R: Resistance (Ohms, Ω)  
     </p>
   
     <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -62,21 +62,21 @@ function OhmsLawSimulator() {
   </>
   ),
     procedure: [
-      "Set up the electrical circuit*: Assemble a simple circuit with a power supply, ammeter, voltmeter, resistors of different values, and connecting wires. Ensure all connections are secure.",
-      "Connect the ammeter in series*: Place the ammeter in series with the resistor to measure the current flowing through the circuit. Verify the ammeter is set to the appropriate range.",
-      "Connect the voltmeter in parallel*: Connect the voltmeter in parallel across the resistor to measure the potential difference. Ensure the voltmeter is set to the appropriate range.",
-      "Prepare the data collection tools*: Have your lab notebook ready for recording measurements, with prepared tables for voltage, current, and calculated resistance values.",
-      "Begin with zero voltage*: Ensure the power supply is set to zero volts before closing the circuit. This provides a reference point and protects the components.",
-      "Increase the voltage gradually*: Slowly increase the voltage from the power supply in small, consistent increments (e.g., 0.5V or 1.0V steps), up to the maximum safe value for your components.",
-      "Record measurements at each voltage level*: At each voltage setting, record both the voltage reading from the voltmeter and the current reading from the ammeter.",
-      "Calculate the resistance*: For each pair of voltage (V) and current (I) readings, calculate the resistance using Ohm's Law: R = V/I. Record this value in your data table.",
-      "Create a voltage vs. current graph*: Plot voltage on the y-axis against current on the x-axis. For an ohmic conductor, this should be a straight line with slope equal to the resistance.",
-      "Repeat with different resistors*: Change the resistor in the circuit and repeat steps 5-9 to verify that different resistors give different slopes on the V-I graph.",
-      "Verify the relationship*: Confirm that the resistance calculated from V/I remains constant (within experimental error) at different voltage levels for ohmic conductors.",
-      "Test a non-ohmic component*: Replace the resistor with a non-ohmic component (like a diode or light bulb) and repeat measurements to observe non-linear V-I relationship.",
-      "Investigate temperature effects*: For comprehensive analysis, observe how the resistance changes when the component heats up during extended operation.",
-      "Analyze sources of error*: Consider contact resistance, instrument precision, temperature variations, and other factors that might affect your measurements.",
-      "Document your findings*: Prepare a lab report including your methodology, data tables, calculations, graphs, and conclusions about the validity of Ohm's Law for different components.",
+      "Set up the electrical circuit: Assemble a simple circuit with a power supply, ammeter, voltmeter, resistors of different values, and connecting wires. Ensure all connections are secure.",
+      "Connect the ammeter in series: Place the ammeter in series with the resistor to measure the current flowing through the circuit. Verify the ammeter is set to the appropriate range.",
+      "Connect the voltmeter in parallel: Connect the voltmeter in parallel across the resistor to measure the potential difference. Ensure the voltmeter is set to the appropriate range.",
+      "Prepare the data collection tools: Have your lab notebook ready for recording measurements, with prepared tables for voltage, current, and calculated resistance values.",
+      "Begin with zero voltage: Ensure the power supply is set to zero volts before closing the circuit. This provides a reference point and protects the components.",
+      "Increase the voltage gradually: Slowly increase the voltage from the power supply in small, consistent increments (e.g., 0.5V or 1.0V steps), up to the maximum safe value for your components.",
+      "Record measurements at each voltage level: At each voltage setting, record both the voltage reading from the voltmeter and the current reading from the ammeter.",
+      "Calculate the resistance: For each pair of voltage (V) and current (I) readings, calculate the resistance using Ohm's Law: R = V/I. Record this value in your data table.",
+      "Create a voltage vs. current graph: Plot voltage on the y-axis against current on the x-axis. For an ohmic conductor, this should be a straight line with slope equal to the resistance.",
+      "Repeat with different resistors: Change the resistor in the circuit and repeat steps 5-9 to verify that different resistors give different slopes on the V-I graph.",
+      "Verify the relationship: Confirm that the resistance calculated from V/I remains constant (within experimental error) at different voltage levels for ohmic conductors.",
+      "Test a non-ohmic component: Replace the resistor with a non-ohmic component (like a diode or light bulb) and repeat measurements to observe non-linear V-I relationship.",
+      "Investigate temperature effects: For comprehensive analysis, observe how the resistance changes when the component heats up during extended operation.",
+      "Analyze sources of error: Consider contact resistance, instrument precision, temperature variations, and other factors that might affect your measurements.",
+      "Document your findings: Prepare a lab report including your methodology, data tables, calculations, graphs, and conclusions about the validity of Ohm's Law for different components.",
     ],
     queries: "/assets/ohms-law-animation.gif",
     video: "https://www.youtube.com/embed/OhmsLawVideo",
@@ -377,8 +377,8 @@ function OhmsLawSimulator() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
-            src={experiment.video}
+            height="600"
+            src={"https://www.youtube.com/embed/E_DsqQARbFg"}
             title="Ohm's Law Video"
             className="rounded-md"
             allowFullScreen

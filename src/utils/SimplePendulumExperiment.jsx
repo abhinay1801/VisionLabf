@@ -36,11 +36,11 @@ function SimplePendulumExperiment() {
           gravitational force acting tangentially to the path of motion.
         </p>
         <p>
-          - **Restoring Force:** The force acting to bring the pendulum back to
+          - Restoring Force: The force acting to bring the pendulum back to
           equilibrium is proportional to its displacement.
         </p>
         <p>
-          - **Time Period Dependence:** The time period of oscillation depends
+          - Time Period Dependence: The time period of oscillation depends
           on the length of the string and the acceleration due to gravity.
         </p>
 
@@ -50,9 +50,9 @@ function SimplePendulumExperiment() {
           T = 2π √(L/g)
         </p>
         <p>
-          - **T:** Time period of one complete oscillation (s) <br />
-          - **L:** Length of the pendulum (m) <br />- **g:** Acceleration due to
-          gravity (9.81 m/s²)
+          - T: Time period of one complete oscillation (s) <br />
+          - L: Length of the pendulum (m) <br />
+          - g: Acceleration due to gravity (9.81 m/s²)
         </p>
 
         <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -65,38 +65,38 @@ function SimplePendulumExperiment() {
       </>
     ),
     procedure: [
-      "Set up the pendulum apparatus*: Secure a rigid support to suspend the pendulum. Ensure the support is stable and the string or rod is firmly attached.",
+      "Set up the pendulum apparatus: Secure a rigid support to suspend the pendulum. Ensure the support is stable and the string or rod is firmly attached.",
 
-      "Measure the length of the pendulum*: Using a meter scale, carefully measure the distance from the point of suspension to the center of the bob. Record this value as L (in meters).",
+      "Measure the length of the pendulum: Using a meter scale, carefully measure the distance from the point of suspension to the center of the bob. Record this value as L (in meters).",
 
-      "Prepare timing equipment*: Have a stopwatch or timer ready with precision to at least 0.01 seconds. Alternatively, use a photogate timer for more accurate measurements.",
+      "Prepare timing equipment: Have a stopwatch or timer ready with precision to at least 0.01 seconds. Alternatively, use a photogate timer for more accurate measurements.",
 
-      "Mark the equilibrium position*: Note the position where the pendulum hangs at rest. This is your reference point for counting oscillations.",
+      "Mark the equilibrium position: Note the position where the pendulum hangs at rest. This is your reference point for counting oscillations.",
 
-      "Displace the pendulum*: Gently pull the pendulum bob to one side, keeping the string taut. For the simple pendulum approximation to be valid, limit the displacement to small angles (preferably less than 15° from vertical).",
+      "Displace the pendulum: Gently pull the pendulum bob to one side, keeping the string taut. For the simple pendulum approximation to be valid, limit the displacement to small angles (preferably less than 15° from vertical).",
 
-      "Release the pendulum*: Let go of the bob without imparting any additional velocity. The pendulum should swing smoothly in a plane.",
+      "Release the pendulum: Let go of the bob without imparting any additional velocity. The pendulum should swing smoothly in a plane.",
 
-      "Start timing multiple oscillations*: Begin timing as the pendulum passes through the equilibrium position. Counting this as oscillation zero, count at least 20 complete oscillations for better accuracy.",
+      "Start timing multiple oscillations: Begin timing as the pendulum passes through the equilibrium position. Counting this as oscillation zero, count at least 20 complete oscillations for better accuracy.",
 
-      "Record the total time*: Stop the timer after the predetermined number of oscillations. Record this value as the total time t (in seconds).",
+      "Record the total time: Stop the timer after the predetermined number of oscillations. Record this value as the total time t (in seconds).",
 
-      "Calculate the experimental period*: Divide the total time by the number of oscillations to find the experimental period: Tₑₓₚ = t/n.",
+      "Calculate the experimental period: Divide the total time by the number of oscillations to find the experimental period: Tₑₓₚ = t/n.",
 
-      "Calculate the theoretical period*: Using the formula T = 2π √(L/g), calculate the theoretical period where g = 9.81 m/s².",
+      "Calculate the theoretical period: Using the formula T = 2π √(L/g), calculate the theoretical period where g = 9.81 m/s².",
 
-      "Compare experimental and theoretical values*: Calculate the percentage error: % error = |Tₑₓₚ - Tₜₕₑₒᵣᵧ| / Tₜₕₑₒᵣᵧ × 100%.",
+      "Compare experimental and theoretical values: Calculate the percentage error: % error = |Tₑₓₚ - Tₜₕₑₒᵣᵧ| / Tₜₕₑₒᵣᵧ × 100%.",
 
-      "Repeat with different lengths*: Change the length of the pendulum and repeat steps 2-11. Create a graph of T² vs L, which should be a straight line with slope 4π²/g.",
+      "Repeat with different lengths: Change the length of the pendulum and repeat steps 2-11. Create a graph of T² vs L, which should be a straight line with slope 4π²/g.",
 
-      "Investigate the effect of mass*: Keeping the length constant, replace the bob with different masses and repeat the experiment to verify that mass does not affect the period.",
+      "Investigate the effect of mass: Keeping the length constant, replace the bob with different masses and repeat the experiment to verify that mass does not affect the period.",
 
-      "Analyze sources of error*: Consider air resistance, friction at the pivot, measurement uncertainties, and timing errors in your analysis.",
+      "Analyze sources of error: Consider air resistance, friction at the pivot, measurement uncertainties, and timing errors in your analysis.",
 
-      "Document your findings*: Prepare a comprehensive lab report including your methodology, data tables, calculations, graphs, and conclusions.",
+      "Document your findings: Prepare a comprehensive lab report including your methodology, data tables, calculations, graphs, and conclusions.",
     ],
     queries: "/assets/simple-pendulum-animation.gif",
-    video: "https://www.youtube.com/embed/SimplePendulumVideo",
+
     resources: [
       {
         title: "Simple Pendulum - Khan Academy",
@@ -403,8 +403,8 @@ function SimplePendulumExperiment() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
-            src={experiment.video}
+            height="600"
+            src={"https://www.youtube.com/embed/t5kAuqtw7Ns"}
             title="Simple Pendulum Video"
             className="rounded-md"
             allowFullScreen

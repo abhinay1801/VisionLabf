@@ -41,7 +41,7 @@ function Chemistry() {
       <div className="container mx-auto px-4 py-8">
         {/* Back Button */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6"
           aria-label="Back to Home"
         >
@@ -58,7 +58,7 @@ function Chemistry() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2">15+ Experiments</h3>
+              <h3 className="font-bold text-xl mb-2">Experiments</h3>
               <p className="text-gray-600">
                 Comprehensive collection of chemistry experiments.
               </p>

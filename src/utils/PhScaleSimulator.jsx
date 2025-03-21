@@ -25,19 +25,19 @@ function PhScaleSimulator() {
   
     <h2 className="text-xl font-bold mt-4">Theory</h2>
     <p>
-      The pH scale is a logarithmic scale used to measure the acidity or basicity of a solution. It ranges from **0 to 14**, where **7 is neutral**, values **below 7 indicate acidity**, and values **above 7 indicate basicity**.
+      The pH scale is a logarithmic scale used to measure the acidity or basicity of a solution. It ranges from 0 to 14, where 7 is neutral, values below 7 indicate acidity, and values above 7 indicate basicity.
     </p>
     <p>
-      The pH of a solution depends on the concentration of **hydrogen ions (H⁺)** present in it. Strong acids have a low pH (closer to 0), while strong bases have a high pH (closer to 14).
+      The pH of a solution depends on the concentration of **hydrogen ions (H⁺) present in it. Strong acids have a low pH (closer to 0), while strong bases have a high pH (closer to 14).
     </p>
     <p>
-      - **Acidic Solutions (pH less than 7):** High concentration of H⁺ ions (e.g., lemon juice, vinegar).  
+      - Acidic Solutions (pH less than 7): High concentration of H⁺ ions (e.g., lemon juice, vinegar).  
     </p>
     <p>
-      - **Neutral Solutions (pH = 7):** Equal concentration of H⁺ and OH⁻ ions (e.g., pure water).  
+      - Neutral Solutions (pH = 7): Equal concentration of H⁺ and OH⁻ ions (e.g., pure water).  
     </p>
     <p>
-      - **Basic Solutions (pH greater than 7):** High concentration of OH⁻ ions (e.g., soap, ammonia).  
+      - Basic Solutions (pH greater than 7): High concentration of OH⁻ ions (e.g., soap, ammonia).  
     </p>
   
     <h2 className="text-xl font-bold mt-4">Mathematical Model</h2>
@@ -48,8 +48,8 @@ function PhScaleSimulator() {
       pH = -log[H⁺]
     </p>
     <p>
-      - **pH:** A measure of acidity or basicity. <br />
-      - **[H⁺]:** The concentration of hydrogen ions in moles per liter (M).  
+      - pH: A measure of acidity or basicity. <br />
+      - [H⁺]: The concentration of hydrogen ions in moles per liter (M).  
     </p>
   
     <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -62,20 +62,20 @@ function PhScaleSimulator() {
   </>
 ),  
     procedure: [
-      "Access the pH simulator*: Open the virtual pH simulation software or website and ensure it is functioning correctly.",
-      "Familiarize with the interface*: Explore the simulator’s tools, such as the pH scale, solution selection, dropper, beakers, and virtual probes.",
-      "Select the solution*: Choose an acidic, neutral, or basic solution from the simulator's options to analyze its pH.",
-      "Calibrate the virtual pH meter*: If required, adjust the pH meter in the simulator using standard buffer solutions to ensure accurate readings.",
-      "Immerse the virtual pH probe*: Drag and place the pH probe into the selected solution to measure its pH value.",
-      "Observe the pH reading*: Note the pH value displayed on the simulator. Identify whether the solution is acidic (pH < 7), neutral (pH = 7), or basic (pH > 7).",
-      "Test different solutions*: Repeat the process with different solutions, including strong acids, weak acids, strong bases, and weak bases, to compare pH values.",
-      "Add acids or bases*: Use the simulator’s tools to add a few drops of a strong acid (e.g., HCl) or a strong base (e.g., NaOH) to the solution and observe how the pH changes.",
-      "Analyze buffer solutions*: If available, test buffer solutions in the simulator by adding acids and bases to see how they resist changes in pH.",
-      "Plot a pH change graph*: Record the pH values before and after adding acids or bases, and create a pH vs. volume graph if the simulator allows data visualization.",
-      "Compare with real-life experiments*: Relate the simulated pH values to expected real-world results based on known pH scales of common substances.",
-      "Identify the equivalence point*: If the simulator includes titration, perform an acid-base titration and note the pH at the equivalence point.",
-      "Analyze sources of error*: Consider limitations of the simulation, such as preset values, digital approximations, and the absence of real-world factors like temperature effects.",
-      "Document findings*: Compile observations, pH values, comparisons, and conclusions on acid-base properties based on the simulator’s output.",
+      "Access the pH simulator: Open the virtual pH simulation software or website and ensure it is functioning correctly.",
+      "Familiarize with the interface: Explore the simulator’s tools, such as the pH scale, solution selection, dropper, beakers, and virtual probes.",
+      "Select the solution: Choose an acidic, neutral, or basic solution from the simulator's options to analyze its pH.",
+      "Calibrate the virtual pH meter: If required, adjust the pH meter in the simulator using standard buffer solutions to ensure accurate readings.",
+      "Immerse the virtual pH probe: Drag and place the pH probe into the selected solution to measure its pH value.",
+      "Observe the pH reading: Note the pH value displayed on the simulator. Identify whether the solution is acidic (pH < 7), neutral (pH = 7), or basic (pH > 7).",
+      "Test different solutions: Repeat the process with different solutions, including strong acids, weak acids, strong bases, and weak bases, to compare pH values.",
+      "Add acids or bases: Use the simulator’s tools to add a few drops of a strong acid (e.g., HCl) or a strong base (e.g., NaOH) to the solution and observe how the pH changes.",
+      "Analyze buffer solutions: If available, test buffer solutions in the simulator by adding acids and bases to see how they resist changes in pH.",
+      "Plot a pH change graph: Record the pH values before and after adding acids or bases, and create a pH vs. volume graph if the simulator allows data visualization.",
+      "Compare with real-life experiments: Relate the simulated pH values to expected real-world results based on known pH scales of common substances.",
+      "Identify the equivalence point: If the simulator includes titration, perform an acid-base titration and note the pH at the equivalence point.",
+      "Analyze sources of error: Consider limitations of the simulation, such as preset values, digital approximations, and the absence of real-world factors like temperature effects.",
+      "Document findings: Compile observations, pH values, comparisons, and conclusions on acid-base properties based on the simulator’s output.",
     ],
     queries: "/assets/ph-scale-animation.gif",
     video: "https://www.youtube.com/embed/pHScaleVideo",
@@ -338,8 +338,8 @@ function PhScaleSimulator() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
-            src={experiment.video}
+            height="600"
+            src={"https://www.youtube.com/embed/KfWvdSyW6Io"}
             title="pH Scale Video"
             className="rounded-md"
             allowFullScreen

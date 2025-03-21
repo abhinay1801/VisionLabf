@@ -38,19 +38,19 @@ function ElectrolysisExperiment() {
           the electrodes, leading to the formation of gas bubbles.
         </p>
         <p>
-          - **At the cathode (-):** Reduction of hydrogen ions takes place,
+          - At the cathode (-): Reduction of hydrogen ions takes place,
           leading to the release of hydrogen gas.
         </p>
         <p>
-          - **At the anode (+):** Oxidation of hydroxide ions occurs, producing
+          - At the anode (+): Oxidation of hydroxide ions occurs, producing
           oxygen gas and water molecules.
         </p>
 
         <h2 className="text-xl font-bold mt-4">Chemical Reactions</h2>
         <p>
-          - **Overall Reaction:** 2H₂O (l) → 2H₂ (g) + O₂ (g) <br />
-          - **At the cathode (-):** 2H₂O + 2e⁻ → H₂ (gas) + 2OH⁻ <br />- **At
-          the anode (+):** 4OH⁻ → O₂ (gas) + 2H₂O + 4e⁻
+          - Overall Reaction: 2H₂O (l) → 2H₂ (g) + O₂ (g) <br />
+          - At the cathode (-): 2H₂O + 2e⁻ → H₂ (gas) + 2OH⁻ <br />
+          - At the anode (+): 4OH⁻ → O₂ (gas) + 2H₂O + 4e⁻
         </p>
 
         <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -63,35 +63,35 @@ function ElectrolysisExperiment() {
       </>
     ),
     procedure: [
-      "Set up the pendulum apparatus*: Secure a rigid support to suspend the pendulum. Ensure the support is stable and the string or rod is firmly attached.",
+      "Set up the pendulum apparatus: Secure a rigid support to suspend the pendulum. Ensure the support is stable and the string or rod is firmly attached.",
 
-      "Measure the length of the pendulum*: Using a meter scale, carefully measure the distance from the point of suspension to the center of the bob. Record this value as L (in meters).",
+      "Measure the length of the pendulum: Using a meter scale, carefully measure the distance from the point of suspension to the center of the bob. Record this value as L (in meters).",
 
-      "Prepare timing equipment*: Have a stopwatch or timer ready with precision to at least 0.01 seconds. Alternatively, use a photogate timer for more accurate measurements.",
+      "Prepare timing equipment: Have a stopwatch or timer ready with precision to at least 0.01 seconds. Alternatively, use a photogate timer for more accurate measurements.",
 
-      "Mark the equilibrium position*: Note the position where the pendulum hangs at rest. This is your reference point for counting oscillations.",
+      "Mark the equilibrium position: Note the position where the pendulum hangs at rest. This is your reference point for counting oscillations.",
 
-      "Displace the pendulum*: Gently pull the pendulum bob to one side, keeping the string taut. For the simple pendulum approximation to be valid, limit the displacement to small angles (preferably less than 15° from vertical).",
+      "Displace the pendulum: Gently pull the pendulum bob to one side, keeping the string taut. For the simple pendulum approximation to be valid, limit the displacement to small angles (preferably less than 15° from vertical).",
 
-      "Release the pendulum*: Let go of the bob without imparting any additional velocity. The pendulum should swing smoothly in a plane.",
+      "Release the pendulum: Let go of the bob without imparting any additional velocity. The pendulum should swing smoothly in a plane.",
 
-      "Start timing multiple oscillations*: Begin timing as the pendulum passes through the equilibrium position. Counting this as oscillation zero, count at least 20 complete oscillations for better accuracy.",
+      "Start timing multiple oscillations: Begin timing as the pendulum passes through the equilibrium position. Counting this as oscillation zero, count at least 20 complete oscillations for better accuracy.",
 
-      "Record the total time*: Stop the timer after the predetermined number of oscillations. Record this value as the total time t (in seconds).",
+      "Record the total time: Stop the timer after the predetermined number of oscillations. Record this value as the total time t (in seconds).",
 
-      "Calculate the experimental period*: Divide the total time by the number of oscillations to find the experimental period: Tₑₓₚ = t/n.",
+      "Calculate the experimental period: Divide the total time by the number of oscillations to find the experimental period: Tₑₓₚ = t/n.",
 
-      "Calculate the theoretical period*: Using the formula T = 2π √(L/g), calculate the theoretical period where g = 9.81 m/s².",
+      "Calculate the theoretical period: Using the formula T = 2π √(L/g), calculate the theoretical period where g = 9.81 m/s².",
 
-      "Compare experimental and theoretical values*: Calculate the percentage error: % error = |Tₑₓₚ - Tₜₕₑₒᵣᵧ| / Tₜₕₑₒᵣᵧ × 100%.",
+      "Compare experimental and theoretical values: Calculate the percentage error: % error = |Tₑₓₚ - Tₜₕₑₒᵣᵧ| / Tₜₕₑₒᵣᵧ × 100%.",
 
-      "Repeat with different lengths*: Change the length of the pendulum and repeat steps 2-11. Create a graph of T² vs L, which should be a straight line with slope 4π²/g.",
+      "Repeat with different lengths: Change the length of the pendulum and repeat steps 2-11. Create a graph of T² vs L, which should be a straight line with slope 4π²/g.",
 
-      "Investigate the effect of mass*: Keeping the length constant, replace the bob with different masses and repeat the experiment to verify that mass does not affect the period.",
+      "Investigate the effect of mass: Keeping the length constant, replace the bob with different masses and repeat the experiment to verify that mass does not affect the period.",
 
-      "Analyze sources of error*: Consider air resistance, friction at the pivot, measurement uncertainties, and timing errors in your analysis.",
+      "Analyze sources of error: Consider air resistance, friction at the pivot, measurement uncertainties, and timing errors in your analysis.",
 
-      "Document your findings*: Prepare a comprehensive lab report including your methodology, data tables, calculations, graphs, and conclusions.",
+      "Document your findings: Prepare a comprehensive lab report including your methodology, data tables, calculations, graphs, and conclusions.",
     ],
     queries: "/assets/electrolysis-animation.gif",
     video: "https://www.youtube.com/embed/6pM5to36Rws",
@@ -383,8 +383,8 @@ function ElectrolysisExperiment() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
-            src={experiment.video}
+            height="600"
+            src={"https://www.youtube.com/embed/WmtaMq36jaE"}
             title="Experiment Video"
             className="rounded-md"
             allowFullScreen

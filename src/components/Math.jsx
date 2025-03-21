@@ -56,7 +56,7 @@ function Math() {
       <div className="container mx-auto px-4 py-8">
         {/* Back Button */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6"
           aria-label="Back to Home"
         >

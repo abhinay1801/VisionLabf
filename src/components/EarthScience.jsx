@@ -48,7 +48,7 @@ function EarthScience() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <button 
-          onClick={() => navigate('/')} 
+          onClick={() => navigate('/home')} 
           className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -63,7 +63,7 @@ function EarthScience() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="font-bold text-xl mb-2">10+ Experiments</h3>
+              <h3 className="font-bold text-xl mb-2">Experiments</h3>
               <p className="text-gray-600">Explore Earth's processes</p>
             </div>
             <div className="bg-yellow-50 p-6 rounded-lg text-center">

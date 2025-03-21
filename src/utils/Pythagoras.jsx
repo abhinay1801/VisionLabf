@@ -34,13 +34,13 @@ function PythagorasTheorem() {
           of a missing side in a right-angled triangle.
         </p>
         <p>
-          - **Hypotenuse (c):** The longest side of the right-angled triangle,
+          - Hypotenuse (c): The longest side of the right-angled triangle,
           opposite the right angle.
         </p>
         <p>
-          - **Legs (a, b):** The two shorter sides that form the right angle.
+          - Legs (a, b): The two shorter sides that form the right angle.
         </p>
-        <p>- **Right Angle (90°):** The angle between the two legs.</p>
+        <p>- Right Angle (90°): The angle between the two legs.</p>
 
         <h2 className="text-xl font-bold mt-4">Mathematical Model</h2>
         <p>The mathematical expression of Pythagoras' Theorem is:</p>
@@ -48,9 +48,9 @@ function PythagorasTheorem() {
           a² + b² = c²
         </p>
         <p>
-          - **a:** One leg of the triangle <br />
-          - **b:** The other leg of the triangle <br />- **c:** The hypotenuse
-          (longest side)
+          - a: One leg of the triangle <br />
+          - b: The other leg of the triangle <br />
+          - c: The hypotenuse (longest side)
         </p>
 
         <h2 className="text-xl font-bold mt-4">Applications</h2>
@@ -63,21 +63,21 @@ function PythagorasTheorem() {
       </>
     ),
     procedure: [
-      "Access the Pythagoras simulator*: Open the virtual Pythagorean theorem simulation software or website and ensure it is functioning correctly.",
-      "Familiarize with the interface*: Explore the simulator’s tools, such as the grid, triangle creator, measurement tools, and calculation features.",
+      "Access the Pythagoras simulator: Open the virtual Pythagorean theorem simulation software or website and ensure it is functioning correctly.",
+      "Familiarize with the interface: Explore the simulator’s tools, such as the grid, triangle creator, measurement tools, and calculation features.",
       "Create a right-angled triangle: Use the simulator to construct a right-angled triangle by selecting three points and ensuring one angle is exactly **90°*.",
-      "Measure the triangle's sides: Identify and label the **base (a), **height (b), and **hypotenuse (c)* using the measurement tools.",
+      "Measure the triangle's sides: Identify and label the base (a), height (b), and hypotenuse (c) using the measurement tools.",
       "Apply the Pythagorean theorem: Verify that the sum of the squares of the two shorter sides equals the square of the hypotenuse (a² + b² = c²*).",
-      "Test different triangle sizes*: Create triangles of varying side lengths and confirm that the Pythagorean theorem holds for each case.",
-      "Compare calculated and measured values*: Use the simulator’s calculator to compute the hypotenuse using the formula and compare it with the measured length.",
-      "Modify the triangle: Adjust the lengths of **a* and *b* and observe how the hypotenuse *c* changes accordingly.",
-      "Explore real-world applications*: Use the simulator to simulate real-world scenarios where the Pythagorean theorem is applied, such as finding distances.",
-      "Visualize the theorem graphically: Check if the simulator allows visualization by representing **a², **b², and **c²* as squares on the triangle’s sides.",
-      "Analyze sources of error*: Consider limitations of the simulation, such as rounding errors, digital approximations, and the lack of real-world constraints.",
-      "Document findings*: Compile observations, side measurements, calculations, and conclusions based on the simulator’s output.",
+      "Test different triangle sizes: Create triangles of varying side lengths and confirm that the Pythagorean theorem holds for each case.",
+      "Compare calculated and measured values: Use the simulator’s calculator to compute the hypotenuse using the formula and compare it with the measured length.",
+      "Modify the triangle: Adjust the lengths of a and b and observe how the hypotenuse c changes accordingly.",
+      "Explore real-world applications: Use the simulator to simulate real-world scenarios where the Pythagorean theorem is applied, such as finding distances.",
+      "Visualize the theorem graphically: Check if the simulator allows visualization by representing a², b², and c² as squares on the triangle’s sides.",
+      "Analyze sources of error: Consider limitations of the simulation, such as rounding errors, digital approximations, and the lack of real-world constraints.",
+      "Document findings: Compile observations, side measurements, calculations, and conclusions based on the simulator’s output.",
     ],
     queries: "/assets/pythagoras-animation.gif",
-    video: "https://www.youtube.com/embed/PythagorasVideo",
+    video: "https://www.youtube.com/embed/YompsDlEdtc",
     resources: [
       {
         title: "Pythagoras Theorem - Khan Academy",
@@ -354,7 +354,7 @@ function PythagorasTheorem() {
         {activeTab === "video" && (
           <iframe
             width="100%"
-            height="400"
+            height="600"
             src={experiment.video}
             title="Experiment Video"
             className="rounded-md"

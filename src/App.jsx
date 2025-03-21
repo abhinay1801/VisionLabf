@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import { Search, Beaker, Brain, Atom, Calculator, ChevronRight, Download, ChevronDown } from 'lucide-react';
 import Physics from './components/Physics';
 import Chemistry from './components/Chemistry';
-import Biology from './components/Biology';
 import Math from './components/Math';
 import EarthScience from './components/EarthScience';
 import PythagorasTheorem from './utils/Pythagoras';
@@ -17,6 +16,10 @@ import OhmsLawExperiment from './utils/OhmsLawExperiment';
 import HookesLawExperiment from './utils/HookesLawExperiment';
 import SimplePendulumExperiment from './utils/SimplePendulumExperiment';
 import FeaturedSimulations from './components/FeaturedSimulations';
+import ComputerScience from './components/ComputerScience';
+import LinearSearchExperiment from './utils/LinearSearchExperiment';
+import Register from './components/Register';
+import Login from './components/Login';
 
 
 function SimulationCard({ title, image, subject, grade }) {
@@ -48,7 +51,7 @@ function DropdownMenu({ title, items, isOpen, onToggle }) {
     if (item === "Physics") navigate('/physics');
     if (item === "Chemistry") navigate('/chemistry');
     if (item === "Math") navigate('/math');
-    if (item === "Biology") navigate('/biology');
+    if (item === "ComputerScience") navigate('/computerscience');
     if (item === "Earth Science") navigate('/earthscience');
 
   };
@@ -94,7 +97,7 @@ function HomePage() {
         "Physics",
         "Chemistry",
         "Math",
-        "Biology",
+        "ComputerScience",
         "Earth Science",
       ]
     },
@@ -262,7 +265,7 @@ function HomePage() {
           </p>
           <p className="text-gray-700 mt-4">Key Features of VisionLab:</p>
           <ul className="list-disc list-inside text-gray-700 mt-4">
-            <li>100+ interactive simulations covering physics, chemistry, biology, earth science, and math.</li>
+            <li>100+ interactive simulations covering physics, chemistry, Computer Science, earth science, and math.</li>
             <li>Designed for students and teachers—ideal for classrooms and self-learning.</li>
             <li>Accessible from anywhere on desktop, mobile, and tablets.</li>
             <li>Multilingual support available in English, Spanish, French, and more.</li>
@@ -270,7 +273,7 @@ function HomePage() {
         </div>
 
         {/* Our Mission - Full Width */}
-        <div className="bg-green-100 p-8 rounded-lg shadow-md w-full mb-8">
+        {/* <div className="bg-green-100 p-8 rounded-lg shadow-md w-full mb-8">
           <h2 className="text-3xl font-bold text-green-800 mb-4">Our Mission</h2>
           <p className="text-gray-700">
             Our mission is to transform STEM education by providing engaging, easy-to-use, and effective learning experiences.
@@ -282,7 +285,7 @@ function HomePage() {
             <li>Ensure global access to education with free and low-cost solutions for schools.</li>
             <li>Support teachers with resources, including ready-to-use simulations and teaching guides.</li>
           </ul>
-        </div>
+        </div> */}
       </div>
       {/* Subject Categories */}
       <div className="container mx-auto px-4 py-5">
@@ -306,9 +309,9 @@ function HomePage() {
           </div>
           <div className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <Brain className="w-8 h-8 text-green-500" />
-            <button onClick={() => navigate("/biology")}>
+            <button onClick={() => navigate("/computerscience")}>
               <div>
-                <h3 className="font-bold">Biology</h3>
+                <h3 className="font-bold">Computer Science</h3>
               </div>
             </button>
           </div>
@@ -341,8 +344,9 @@ function HomePage() {
       <div id="target-section" >
         <FeaturedSimulations/>
       </div>
-      <div className="container mx-auto px-4 py-16" id="about">
-        {/* Publications - Full Width */}
+      {/* Publications - Full Width */}
+      {/* <div className="container mx-auto px-4 py-16" id="about">
+        }
         <div className="bg-purple-100 p-8 rounded-lg shadow-md w-full">
           <h2 className="text-3xl font-bold text-purple-800 mb-4">Publications</h2>
           <p className="text-gray-700">
@@ -360,7 +364,7 @@ function HomePage() {
           </p>
         </div>
 
-      </div>
+      </div> */}
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
@@ -415,10 +419,13 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/physics" element={<Physics />} />
           <Route path="/chemistry" element={<Chemistry />} />
-          <Route path="/biology" element={<Biology />} />
+          <Route path="/computerscience" element={<ComputerScience />} />
           <Route path="/math" element={<Math />} />
           <Route path="/earthscience" element={<EarthScience />} />
 
@@ -432,6 +439,8 @@ function App() {
            <Route path="/physics/ohm's-law" element={<OhmsLawExperiment/>} />
            <Route path="/physics/verification-of-hooke's-law" element={<HookesLawExperiment/>} />
            <Route path="/physics/simple-pendulum" element={<SimplePendulumExperiment />} ></Route>
+
+           <Route path="/computerscience/linearsearch" element={<LinearSearchExperiment />} />
 
 
         </Routes>
