@@ -1,5 +1,5 @@
 {
-  "name": "anurag_hackathon",
+  "name": "mgit_hackathon",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "d3": "^7.9.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.5.0",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.477.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",

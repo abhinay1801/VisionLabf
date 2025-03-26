@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import HelpSPE from "./help_SimplePendulum"; // Simulation Component
 import ChatInterface from "./ChatAi";
+
 
 function SimplePendulumExperiment() {
   const navigate = useNavigate();
@@ -12,6 +13,13 @@ function SimplePendulumExperiment() {
   const [message, setMessage] = useState("");
   const [quizAnswers, setQuizAnswers] = useState({});
   const [score, setScore] = useState(null);
+  // const [userRole, setUserRole] = useState("");
+
+  // // Fetch user role from localStorage on component mount
+  // useEffect(() => {
+  //   const role = localStorage.getItem("userRole");
+  //   setUserRole(role);
+  // }, []);
 
   const experiment = {
     title: "Simple Pendulum Simulator",
@@ -206,6 +214,19 @@ function SimplePendulumExperiment() {
       <h1 className="text-3xl font-bold text-orange-600 mb-4">
         {experiment.title}
       </h1>
+
+      {/* ✅ Show Assign Project only if user is a mentor */}
+      {/* {userRole === "mentor" && (
+        <div className="mb-6 p-4 bg-yellow-200 rounded-md shadow-md">
+          <h2 className="text-xl font-bold text-yellow-800">Assign Project</h2>
+          <button
+            onClick={() => navigate("/assign-project")}
+            className="mt-3 px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700"
+          >
+            Assign New Project
+          </button>
+        </div>5
+      )} */}
 
       <div className="flex gap-4 mb-6 border-b pb-2">
         {[

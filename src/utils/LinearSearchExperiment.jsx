@@ -10,6 +10,8 @@ function LinearSearchExperiment() {
     const [activeTab, setActiveTab] = useState("theory");
     const [feedback, setFeedback] = useState("");
     const [message, setMessage] = useState("");
+    const [quizAnswers, setQuizAnswers] = useState({});
+    const [score, setScore] = useState(null);
 
     const experiment = {
         title: "Linear Search Simulator",
@@ -97,6 +99,7 @@ function LinearSearchExperiment() {
             "If the end of the array is reached and the element is not found, return -1.",
             "End the search."
       ],
+      
         queries: "/assets/linear-search-animation.gif",
         video: "https://www.youtube.com/embed/246V51AWwZM",
         resources: [
@@ -105,13 +108,43 @@ function LinearSearchExperiment() {
         ],
         feedback: "Please share your feedback on this simulation!",
     };
+    const quizQuestions = [
+        {
+          question: "What is the worst-case time complexity of Linear Search?",
+          options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+          correct: "O(n)",
+        },
+        {
+          question: "When is Linear Search preferred over Binary Search?",
+          options: ["When the array is sorted", "When the array is large", "When the array is unsorted", "When the array has unique elements"],
+          correct: "When the array is unsorted",
+        },
+        {
+          question: "What is the best-case time complexity of Linear Search?",
+          options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+          correct: "O(1)",
+        },
+        {
+          question: "What happens if the target element is not found?",
+          options: ["The algorithm returns -1", "The algorithm crashes", "The algorithm sorts the array", "The algorithm throws an error"],
+          correct: "The algorithm returns -1",
+        },
+        {
+          question: "What is the main drawback of Linear Search?",
+          options: ["It requires a sorted array", "It has slow performance for large datasets", "It requires additional memory", "It doesn't work on lists"],
+          correct: "It has slow performance for large datasets",
+        },
+    ];
+
+    
+    
 
     const sendFeedback = (e) => {
         e.preventDefault();
         if (!feedback.trim()) {
             setMessage("Please enter your feedback before submitting.");
             return;
-        }
+        };
 
         emailjs
             .send("service_0updalp", "template_gga1aol", {
@@ -126,6 +159,17 @@ function LinearSearchExperiment() {
             })
             .catch(() => setMessage("Error sending feedback. Please try again."));
     };
+    const handleQuizChange = (questionIndex, answer) => {
+        setQuizAnswers({ ...quizAnswers, [questionIndex]: answer });
+      };
+    
+      const submitQuiz = () => {
+        let totalScore = 0;
+        quizQuestions.forEach((q, index) => {
+          if (quizAnswers[index] === q.correct) totalScore++;
+        });
+        setScore(totalScore);
+      };
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -139,7 +183,7 @@ function LinearSearchExperiment() {
                 {experiment.title}
             </h1>
             <div className="flex gap-4 mb-6 border-b pb-2">
-                {["theory", "procedure", "queries", "simulation", "video", "resources", "feedback"].map((tab) => (
+                {["theory", "procedure", "queries", "simulation", "video", "resources","quiz", "feedback"].map((tab) => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
@@ -187,6 +231,27 @@ function LinearSearchExperiment() {
                         ))}
                     </ul>
                 )}
+                {activeTab === "quiz" && (
+          <div>
+            {quizQuestions.map((q, index) => (
+              <div key={index} className="mb-4">
+                <p className="font-bold">{index+1}.{q.question}</p>
+                {q.options.map((option) => (
+                  <label key={option} className="block">
+                    <input
+                      type="radio"
+                      name={`question-${index}`}
+                      value={option}
+                      onChange={() => handleQuizChange(index, option)}
+                    /> {option}
+                  </label>
+                ))}
+              </div>
+            ))}
+            <button onClick={submitQuiz} className="bg-blue-600 text-white px-4 py-2 rounded-md">Submit Quiz</button>
+            {score !== null && <p className="mt-4 font-bold">Your Score: {score}/5</p>}
+          </div>
+        )}
                 {activeTab === "feedback" && (
                     <div>
                         <p className="text-gray-700 mb-4">{experiment.feedback}</p>
